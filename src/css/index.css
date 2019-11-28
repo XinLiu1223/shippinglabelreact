@@ -42,14 +42,14 @@ h6 {
 
 /* Forms
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-input[type='email'],
-input[type='number'],
-input[type='date'],
-input[type='search'],
-input[type='text'],
-input[type='tel'],
-input[type='url'],
-input[type='password'],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
 textarea,
 select {
   height: 38px;
@@ -67,9 +67,9 @@ select {
 }
 .button,
 button,
-input[type='submit'],
-input[type='reset'],
-input[type='button'] {
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
@@ -93,15 +93,15 @@ button {
   margin-right: 2rem;
 }
 
-input[data-id='city'] {
+input[data-id="city"] {
   width: 160px;
 }
 
-input[data-id='state'] {
+input[data-id="state"] {
   width: 80px;
 }
 
-input[data-id='zip'] {
+input[data-id="zip"] {
   width: 80px;
 }
 
@@ -120,27 +120,32 @@ label {
   top: 50%;
   left: 50%;
   position: absolute;
-  border-radius:12%;
-  border:1px solid black;
-  padding:1rem;
+  border-radius: 12%;
+  border: 1px solid black;
+  padding: 1rem;
 }
 
 .shippinglabel > div {
-  padding-bottom:1rem;
+  padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
-
 
 .shippinglabel .from span {
   text-align: left;
 }
 
-.shippinglabel  span {
+.shippinglabel span {
   text-align: center;
 }
 
-
-
 .shippinglabel h6 {
   text-align: center;
+}
+
+.six {
+  padding-left: 1.3rem;
+}
+
+.columns {
+  padding-left: 1.3rem;
 }
