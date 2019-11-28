@@ -1,5 +1,5 @@
-import React from 'react';
-import { getshippingOption, getShippingRate } from '../utils';
+import React from "react";
+import { getshippingOption, getShippingRate } from "../utils/utils";
 
 export default class ShippingLabel extends React.Component {
   constructor(props) {
@@ -16,20 +16,20 @@ export default class ShippingLabel extends React.Component {
             {getshippingOption(this.state.shippingOption)} Shipping
           </span>
           <span className="block">
-            {' '}
+            {" "}
             ${getShippingRate(
               this.state.weight,
               this.state.shippingOption
-            )}{' '}
-            Shipping Cost{' '}
+            )}{" "}
+            Shipping Cost{" "}
           </span>
         </div>
         <div className="from">
           <span className="block">{this.state.from.name}</span>
           <span className="block">{this.state.from.street}</span>
           <span className="block">
-            {this.state.from.city}, {this.state.from.state}{' '}
-            {this.state.from.zip}{' '}
+            {this.state.from.city}, {this.state.from.state}{" "}
+            {this.state.from.zip}{" "}
           </span>
         </div>
         <div className="to">
