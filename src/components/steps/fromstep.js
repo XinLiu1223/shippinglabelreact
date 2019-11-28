@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { stepMapping } from "../../constants";
+import { stepMapping } from "../../utils/constants";
 
 export default class StepOne extends React.Component {
   render() {
@@ -52,8 +52,8 @@ export default class StepOne extends React.Component {
               onChange={onAction}
               value={from.city}
             />
-            </div>
-            <div className="col-md-4">
+          </div>
+          <div className="col-md-4">
             <label>State </label>
             <input
               className="form-control"
@@ -64,8 +64,8 @@ export default class StepOne extends React.Component {
               onChange={onAction}
               value={from.state}
             />
-            </div>
-            <div className="col-md-4">
+          </div>
+          <div className="col-md-4">
             <label>Zip</label>
             <input
               className="form-control"

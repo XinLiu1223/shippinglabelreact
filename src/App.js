@@ -1,9 +1,9 @@
-import React from 'react';
-import Wizard from './components/wizard/wizard';
-import shippingObj from './components/shippingObj';
-import Header from './components/header';
-import steps from './components/features/steps/index';
-import ShippingLabel from './components/features/shpping-label';
+import React from "react";
+import Wizard from "./components/wizard";
+import shippingObj from "./utils/shippingObj";
+import Header from "./components/header";
+import steps from "./components/steps/index";
+import ShippingLabel from "./components/shpping-label";
 
 export default class ShippingLabelMaker extends React.Component {
   constructor(props) {
@@ -21,6 +21,7 @@ export default class ShippingLabelMaker extends React.Component {
       wizardContext: val
     });
   }
+
   render() {
     return (
       <div>

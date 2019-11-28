@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getshippingOption, getShippingRate } from '../../utils';
-import {stepMapping} from '../../constants';
+import React from "react";
+import PropTypes from "prop-types";
+import { getshippingOption, getShippingRate } from "../../utils/utils";
+import { stepMapping } from "../../utils/constants";
 
 export default class Confirm extends React.Component {
   constructor(props) {
@@ -13,8 +13,8 @@ export default class Confirm extends React.Component {
     return Object.keys(this.state[keye]).map((val, i) => {
       return (
         <li key={i}>
-          {' '}
-          {val} : {this.state[keye][val]}{' '}
+          {" "}
+          {val} : {this.state[keye][val]}{" "}
         </li>
       );
     });
@@ -23,8 +23,8 @@ export default class Confirm extends React.Component {
   getShippingCost() {
     return (
       <span>
-        {' '}
-        {getShippingRate(this.state.weight, this.state.shippingOption)}{' '}
+        {" "}
+        {getShippingRate(this.state.weight, this.state.shippingOption)}{" "}
       </span>
     );
   }
@@ -45,8 +45,11 @@ export default class Confirm extends React.Component {
         <p> Shipping Method: {this.getshippingOption()} </p>
         <p> Shipping Cost: {this.getShippingCost()} </p>
         <p data-id="confirm">
-          {' '}
-          To confirm <button data-step={stepMapping.confirm} onClick={this.props.onAction}>Confirm</button>{' '}
+          {" "}
+          To confirm{" "}
+          <button data-step={stepMapping.confirm} onClick={this.props.onAction}>
+            Confirm
+          </button>{" "}
         </p>
         <p> To update information click previous below </p>
       </div>
@@ -55,6 +58,6 @@ export default class Confirm extends React.Component {
 }
 
 Confirm.propTypes = {
-    wizardContext: PropTypes.object.isRequired,
-    onAction: PropTypes.func.isRequired
+  wizardContext: PropTypes.object.isRequired,
+  onAction: PropTypes.func.isRequired
 };

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Navigation from "../navigation";
-import ProgressBar from "../progressbar";
-import { stepMapping } from "../constants";
-import { validatorObj } from "../utils";
+import Navigation from "./navigation";
+import ProgressBar from "./progressbar";
+import { stepMapping } from "../utils/constants";
+import { validatorObj } from "../utils/utils";
 
 export default class Wizard extends React.Component {
   constructor(props) {
@@ -31,6 +31,7 @@ export default class Wizard extends React.Component {
       });
     }
   }
+
   /* We call this function as a middleware to see what appropriate function to invoke */
   handleFilter(event) {
     const typeOfComponenent = event.target.getAttribute("data-step");
@@ -140,16 +141,17 @@ export default class Wizard extends React.Component {
           prev={this.previous}
           show={this.state.showNavigation}
         />
-        {Object.keys(this.state.errorObj).length>0 && (
-        <div className="alert alert-danger">
-        {Object.keys(this.state.errorObj).map((key, index) => {
-          const error =
-            key === "state"
-              ? "You need two letters for state"
-              : "You have " + key + " error";
-          return <p key={index}> {error} </p>;
-        })}
-        </div>)}
+        {Object.keys(this.state.errorObj).length > 0 && (
+          <div className="alert alert-danger">
+            {Object.keys(this.state.errorObj).map((key, index) => {
+              const error =
+                key === "state"
+                  ? "You need two letters for state"
+                  : "You have " + key + " error";
+              return <p key={index}> {error} </p>;
+            })}
+          </div>
+        )}
       </div>
     );
   }
